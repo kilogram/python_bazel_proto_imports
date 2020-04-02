@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package google.nested;
+
+import "google/nested/b.proto";
+
+message Test {
+  int64 dummy = 1;
+  google.nested.TestB bar = 2;
+}
+
+service FooServic {
+  rpc Foo (Test) returns (google.nested.TestB);
+}

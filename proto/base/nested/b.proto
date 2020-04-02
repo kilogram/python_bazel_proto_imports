@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package base.nested;
+
+message TestB {
+  int64 baz = 1;
+}

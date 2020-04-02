@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package base.nested;
+
+import "base/nested/b.proto";
+
+message Test {
+  int64 dummy = 1;
+  base.nested.TestB bar = 2;
+}
+
+service FooServic {
+  rpc Foo (Test) returns (base.nested.TestB);
+}
